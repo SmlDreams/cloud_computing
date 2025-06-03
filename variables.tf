@@ -6,13 +6,13 @@ variable "location" {
   default = "eastus"
 }
 variable "vnet_name" {
-    default = "vnet-demo"
+  default = "vnet-demo"
 }
 variable "subnet_name" {
-    default = "subnet-demo"
+  default = "subnet-demo"
 }
 variable "admin_username" {
-    default = "azureuser"
+  default = "azureuser"
 }
 variable "admin_password" {
   sensitive = true
