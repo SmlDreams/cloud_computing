@@ -30,7 +30,7 @@ jobs:
       run: terraform validate
 
     - name: Terraform PlaN
-      run: terraform plan -var="admin_username=${{ secrets.ADMIN_USERNAME }}" -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" -var="resource_group_name=${{ secrets.RESSOURCE_GROUP_NAME }}"
+      run: terraform plan -var="admin_username=${{ secrets.ADMIN_USERNAME }}" -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" -var="resource_group_name=${{ secrets.RESSOURCE_GROUP_NAME }}" -var="subnet_name=${{ secrets.SUBNET_NAME }}" -var="vnet_name=${{ secrets.VNET_NAME }}"
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
